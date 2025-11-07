@@ -12,7 +12,7 @@ public class BaseMobileTest {
 
     @BeforeClass
     public void setup() throws Exception {
-        MobileService.startService("127.0.0.1", 4723);
+//        MobileService.startService("127.0.0.1", 4723);
         MobileDriverFactory.setDriver("Android");
         driver = MobileDriverFactory.getDriver();
     }

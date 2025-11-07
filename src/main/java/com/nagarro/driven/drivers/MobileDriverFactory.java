@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.net.MalformedURLException;
+import java.net.URL;
 
 public class MobileDriverFactory {
 
@@ -29,7 +30,7 @@ public class MobileDriverFactory {
             caps.setCapability("appActivity", ConfigManager.get("appActivity"));
             caps.setCapability("autoGrantPermissions", true);
             caps.setCapability("newCommandTimeout", 300);
-            driver.set(new AndroidDriver(MobileService.getAppiumService(), caps));
+            driver.set(new AndroidDriver(new URL("http://127.0.0.1:4723/"), caps));
 
         }
     }
