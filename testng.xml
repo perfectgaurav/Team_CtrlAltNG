@@ -4,7 +4,9 @@
     <test name="Tests">
         <classes>
             <class name="ui.LoginTest"/>
+            <class name="mobile.WikipediaTest"/>
         </classes>
     </test>
+
 </suite>
 
