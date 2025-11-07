@@ -4,7 +4,7 @@ import com.nagarro.driven.drivers.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
-@Listeners()
+
 public class BaseTest {
 
     protected WebDriver driver;

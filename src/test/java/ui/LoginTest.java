@@ -2,13 +2,16 @@ package ui;
 
 import com.nagarro.driven.base.BaseTest;
 import com.nagarro.driven.config.ConfigManager;
-import org.testng.Assert;
 import com.nagarro.driven.pageObjects.loginPage;
+import com.nagarro.driven.utils.TestReportLogger;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.logging.Logger;
+
 public class LoginTest extends BaseTest {
+
+    private static final Logger LOGGER = Logger.getLogger(LoginTest.class.getName());
 
     public loginPage loginpage;
 
@@ -22,15 +25,15 @@ public class LoginTest extends BaseTest {
         String baseUrl = System.getenv("BASE_URL");
         String username = System.getenv("USERNAME");
         String password = System.getenv("PASSWORD");
-        System.out.println("Base URL: " + baseUrl);
-        System.out.println("Username: " + username);
-        System.out.println("Password: " + password);
+        TestReportLogger.info("BaseUrl:"+baseUrl);
+        TestReportLogger.info("Username: " + username);
+        TestReportLogger.info("Password: " + password);
         if (baseUrl == null || baseUrl.isEmpty()) {
             baseUrl = ConfigManager.get("base.url");
-            username=ConfigManager.get("base.username");
-            password=ConfigManager.get("base.password");
+            username = ConfigManager.get("base.username");
+            password = ConfigManager.get("base.password");
         }
         loginpage.navigateToLoginPage(baseUrl);
-        loginpage.login(username,password);
+        loginpage.login(username, password);
     }
 }
