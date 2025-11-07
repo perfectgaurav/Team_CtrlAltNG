@@ -20,7 +20,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/perfectgaurav/CtrlAltNG.git',
+                    url: 'https://github.com/perfectgaurav/Team_CtrlAltNG.git',
                     credentialsId: 'github-token'
             }
         }
@@ -79,3 +79,4 @@ pipeline {
         }
     }
 }
+
