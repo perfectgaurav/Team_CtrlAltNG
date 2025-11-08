@@ -1,7 +1,1 @@
-[2025-11-07 20:27:04] INFO  com.nagarro.driven.utils.TestReportLogger - BaseUrl:null
-[2025-11-07 20:27:04] INFO  com.nagarro.driven.utils.TestReportLogger - Username: gauravkaushik01
-[2025-11-07 20:27:04] INFO  com.nagarro.driven.utils.TestReportLogger - Password: null
-[2025-11-07 20:27:04] INFO  com.nagarro.driven.utils.TestReportLogger - Navigating to Login Page: https://espocrm.espocloud.com
-[2025-11-07 20:27:09] INFO  com.nagarro.driven.utils.TestReportLogger - Entering username: admin
-[2025-11-07 20:27:13] INFO  com.nagarro.driven.utils.TestReportLogger - Entering password.
-[2025-11-07 20:27:13] INFO  com.nagarro.driven.utils.TestReportLogger - Clicking on Login button.
+[2025-11-08 15:45:59] INFO  com.nagarro.driven.utils.TestReportLogger - Navigated to ESPN CricInfo homepage.

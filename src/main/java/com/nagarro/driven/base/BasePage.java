@@ -1,6 +1,7 @@
 package com.nagarro.driven.base;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -44,7 +45,16 @@ public class BasePage {
             wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
         }
     }
-
+    protected void hoverOverElement(By locator) {
+        try {
+            WebElement element = findElement(locator);
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element).perform();
+            log("🖱️ Hovered over element: " + locator);
+        } catch (Exception e) {
+            log("⚠️ Failed to hover over element: " + locator + " — " + e.getMessage());
+        }
+    }
     protected void type(By locator, String text) {
         WebElement element = findElement(locator);
         element.clear();
